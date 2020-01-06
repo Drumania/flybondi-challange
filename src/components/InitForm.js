@@ -5,8 +5,8 @@ import "nouislider/distribute/nouislider.css";
 const InitForm = () => {
     // const [textVal, setTextVal] = useState("");
     // const [condicVal, setCondicVal] = useState("Todos");
-    const [minVal, setMinVal] = useState(200000);
-    const [maxVal, setMaxVal] = useState(900000);
+    const [minVal, setMinVal] = useState(100000);
+    const [maxVal, setMaxVal] = useState(200000);
 
     const onSlidePrecio = values => {
         setMinVal(Math.trunc(values[0]));
