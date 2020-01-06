@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+:root {
+    --border-color: #d9d9d9;
+    --yellow-bondi: #febe10;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #f9f9f9;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #616161;
+    letter-spacing: -0.15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*:focus {
+    outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/***********************/
+/*       Structure
+/***********************/
+
+.container {
+    z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+/* Slider */
+
+.wrap-panel {
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.panel-one {
+    background: transparent url("img/riojaneiro.png") no-repeat center
+        center/cover;
+}
+
+.panel-two {
+    background: transparent url("img/cataratas.png") no-repeat center
+        center/cover;
+}
+
+.panel-three {
+    background: transparent url("img/bariloche.png") no-repeat center
+        center/cover;
+}
+
+.border-left-fb {
+    border-left: 5px solid var(--yellow-bondi);
+    position: relative;
+}
+
+.border-left-fb span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5px 5px;
+}
+
+.border-left-fb span small {
+    color: rgb(231, 231, 231);
+}
+
+.wrap-panel h1 {
+    color: #fff;
+    font-size: 5em;
+    font-family: "Bebas Neue", cursive;
+    display: block;
+    text-shadow: 0px 0px 4px rgba(50, 50, 50, 20);
+    margin-bottom: 8px;
+}
+
+.wrap-panel h3 {
+    color: var(--yellow-bondi);
+    font-size: 2em;
+    display: block;
+    font-family: "Bebas Neue", cursive;
+    text-shadow: 0px 0px 4px rgba(50, 50, 50, 20);
+}
+
+.new-route {
+    border-radius: 10px;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: brown;
+    position: absolute;
+    top: -30px;
+    font-family: "Bebas Neue", cursive;
+    padding: 0px 7px;
+    left: 17px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header ul li {
+    display: inline;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.wrap-icons-menu li a i.fa-globe::after {
+    content: "ESP";
+    color: #fff;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.8em;
+    padding: 6px;
+}
+
+.wrap-icons-menu li a.float-menu {
+    padding: 10px 10px 6px;
+    line-height: 30px;
+    background-color: var(--yellow-bondi);
+    border-radius: 20px;
+}
+
+.wrap-icons-menu li a i {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* form */
+
+.InitForm {
+    z-index: 100;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+}
+
+.InitForm i {
+    color: var(--yellow-bondi);
+}
+
+h4 {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #333;
+}
+
+.InitForm select {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.6em;
+}
+
+input[type="submit"] {
+    background-color: var(--yellow-bondi);
+    border: none;
+    line-height: 90px;
+    border-radius: 5px;
+    width: 100%;
 }
